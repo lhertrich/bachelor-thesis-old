@@ -1,0 +1,26 @@
+import app
+
+db = app.db
+
+class InterfaceDefinition():
+    id = db.Column(db.Integer, primary_key=True)
+    schema_name = db.Column(db.String)
+    schema_id = db.Column(db.Integer)
+    data_core_layer = db.Column(db.String)
+    object_name = db.Column(db.String)
+    object_id = db.Column(db.Integer)
+    object_type = db.Column(db.String)
+    object_type_description = db.Column(db.String)
+    object_sql_code_anzahl_character = db.Column(db.Integer)
+    object_sql_code_first_32767_characters = db.Column(db.String)
+
+    def __init__(self, schema_name, schema_id, data_core_layer, object_name, object_id, object_type, object_type_description, object_sql_code_anzahl_character, object_sql_code_first_32767_characters):
+        self.schema_name = schema_name
+        self.schema_id = schema_id
+        self.data_core_layer = data_core_layer
+        self.object_name = object_name
+        self.object_id = object_id
+        self.object_type = object_type
+        self.object_type_description = object_type_description
+        self.object_sql_code_anzahl_character = object_sql_code_anzahl_character
+        self.object_sql_code_first_32767_characters = object_sql_code_first_32767_characters
