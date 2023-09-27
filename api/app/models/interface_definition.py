@@ -1,6 +1,4 @@
-import app
-
-db = app.db
+from app import db
 
 class InterfaceDefinition():
     id = db.Column(db.Integer, primary_key=True)
